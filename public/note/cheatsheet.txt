@@ -1,0 +1,75 @@
+Saat ini saya adalah seorang mahasiswa Fakultas Sains dan Teknologi, program studi Sistem Komputer di salah satu Universitas yang ada di Medan.
+
+
+Keseharian saya yaitu membaca buku atupun artikel. Selain itu saya juga aktif menuis artikel mengenai teknologi dan programming di blog saya dan teman saya bangun.
+
+
+Saya juga adalah seorang Web Designer dan Web Programmer yang mana dapat membangun subuah web yang dapat membantu dalam menyelesaikan masalah saya pribadi maupun client saya.
+
+
+<div class="bg-[#7377AD] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 font-bold">
+                    PHP
+                </div>
+                <div class="bg-[#E8D44D] w-[125px] h-[30px] rounded-[20px] flex justify-center items-center font-bold">
+                    Javascript
+                </div>
+
+
+
+
+
+<div class="bg-[#E8392C] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Laravel
+                </div>
+                <div class="bg-[#3F893A] w-[125px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Node Js
+                </div>
+                <div class="bg-[#1D0E74] w-[130px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Express Js
+                </div>
+
+
+
+
+
+<div class="bg-[#E86226] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    HTML
+                </div>
+                <div class="bg-[#0079C0] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    CSS
+                </div>
+                <div class="bg-[#36B7F0] w-[150px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Tailwind CSS
+                </div>
+                <div class="bg-[#7CD1EF] w-[130px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    React JS
+                </div>
+
+
+
+
+
+
+<div class="bg-[#EA8C10] w-[135px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    SQL Server
+                </div>
+
+
+
+
+
+
+
+
+<div class="bg-[#E84E31] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    GIT
+                </div>
+                <div class="bg-[#262624] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Github
+                </div>
+                <div class="bg-[#26225A] w-[125px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Rest API 
+                </div>
+                <div class="bg-[#9B5EF2] w-[100px] h-[30px] rounded-[20px] flex justify-center items-center mr-3 mb-3 font-bold">
+                    Figma
+                </div>

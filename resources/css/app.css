@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply text-white-primary font-inter
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar-thumb, .detail-portfolio::-webkit-scrollbar-thumb, .web-name::-webkit-scrollbar-thumb, .gambar::-webkit-scrollbar-thumb, .portfolio-admin::-webkit-scrollbar-thumb {
+    @apply rounded-[10px] bg-black-nav
+}
+
+body::-webkit-scrollbar, .detail-portfolio::-webkit-scrollbar, .web-name::-webkit-scrollbar, .gambar::-webkit-scrollbar, .message::-webkit-scrollbar, .portfolio-admin::-webkit-scrollbar {
+    width: 10px;
+}
+
+.message::-webkit-scrollbar-thumb {
+    @apply rounded-[10px] bg-black-list
+}
+
+.message::-webkit-scrollbar-track {
+    @apply bg-black-nav rounded-tr-[10px] rounded-br-[10px]
+}
+
+.contact-admin-overflow::-webkit-scrollbar-thumb {
+    @apply rounded-[10px] bg-black-nav
+}
+
+.contact-admin-overflow::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+
+.container-asli-portfolio-detail::-webkit-scrollbar-thumb {
+    @apply bg-transparent
+}
+
+.container-asli-portfolio-detail::-webkit-scrollbar {
+    width: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.intro {
+    background: linear-gradient(91.5deg, #EB8B75 0.24%, #A21AA5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.flex-detail-portfolio {
+    @apply flex
+}
+
+.masih-pengembangan, .masih-pengembangan-detail, .contact-message {
+    animation: bottom-to-top 0.5s;
+}
+
+@keyframes bottom-to-top {
+    0% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.nav-mobile-hide {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-mobile-hide {
+        display: none;
+    }
+}
+
+.nav-opacity {
+    @apply opacity-60
+}
+
+.nav-shadow {
+    @apply shadow-xl shadow-black opacity-100
+}
+
+/* admin */
+.nav-mobile-admin-show {
+    @apply translate-x-0
+}
+
+.alert-admin-content {
+    animation: top-to-bottom 0.5s;
+    transition: 0.5s;
+}
+
+@keyframes top-to-bottom {
+    0% {
+        transform: translateY(200%);        
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.laravel {
+    background-color: #E8392C;
+    height: 35px;
+}
+.php {
+    background-color: #7377AD;
+    height: 35px;
+}
+.javascript {
+    background-color: #E8D44D;
+    height: 35px;
+}
+.node {
+    background-color: #3F893A;
+    height: 35px;
+}
+.ex {
+    background-color: #1D0E74;
+    height: 35px;
+}
+.html {
+    background-color: #E86226;
+    height: 35px;
+}
+.css {
+    background-color: #0079C0;
+    height: 35px;
+}
+.tw {
+    background-color: #36B7F0;
+    height: 35px;
+}
+.react {
+    background-color: #7CD1EF;
+    height: 35px;
+}
+.mysql {
+    background-color: #EA8C10;
+    height: 35px;
+}
+.git {
+    background-color: #E84E31;
+    height: 35px;
+}
+.github {
+    background-color: #262624;
+    height: 35px;
+}
+.api {
+    background-color: #26225A;
+    height: 35px;
+}
+.figma {
+    background-color: #9B5EF2;
+    height: 35px;
+}
+
+.buttonSend {
+    opacity: 0.4;
+}
+
+.containerDetailPortfolio {
+    animation: bottom-to-top-containerDetailPortfolio 0.3s;
+    transition: 0.3s;
+}
+
+@keyframes bottom-to-top-containerDetailPortfolio {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* .containerDetailPortfolio {
+    transform: translateY('80%');
+} */
+
+
+@media screen and (min-width:768px) {
+    .container-asli-portfolio-detail::-webkit-scrollbar-thumb {
+        @apply bg-black-nav
+    }
+    
+    .container-asli-portfolio-detail::-webkit-scrollbar {
+        width: 10px;
+    }
+}
