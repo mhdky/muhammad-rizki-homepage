@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * {
-    @apply text-red-500 font-inter;
+    @apply text-white-primary font-inter;
 }
 
 .overflow-hidden {
