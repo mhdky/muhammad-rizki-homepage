@@ -1,35 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    @apply text-white-primary font-inter
+    @apply text-red-500 font-inter;
 }
 
 .overflow-hidden {
     overflow: hidden;
 }
 
-body::-webkit-scrollbar-thumb, .detail-portfolio::-webkit-scrollbar-thumb, .web-name::-webkit-scrollbar-thumb, .gambar::-webkit-scrollbar-thumb, .portfolio-admin::-webkit-scrollbar-thumb {
-    @apply rounded-[10px] bg-black-nav
+body::-webkit-scrollbar-thumb,
+.detail-portfolio::-webkit-scrollbar-thumb,
+.web-name::-webkit-scrollbar-thumb,
+.gambar::-webkit-scrollbar-thumb,
+.portfolio-admin::-webkit-scrollbar-thumb {
+    @apply rounded-[10px] bg-black-nav;
 }
 
-body::-webkit-scrollbar, .detail-portfolio::-webkit-scrollbar, .web-name::-webkit-scrollbar, .gambar::-webkit-scrollbar, .message::-webkit-scrollbar, .portfolio-admin::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.detail-portfolio::-webkit-scrollbar,
+.web-name::-webkit-scrollbar,
+.gambar::-webkit-scrollbar,
+.message::-webkit-scrollbar,
+.portfolio-admin::-webkit-scrollbar {
     width: 10px;
 }
 
 .message::-webkit-scrollbar-thumb {
-    @apply rounded-[10px] bg-black-list
+    @apply rounded-[10px] bg-black-list;
 }
 
 .message::-webkit-scrollbar-track {
-    @apply bg-black-nav rounded-tr-[10px] rounded-br-[10px]
+    @apply bg-black-nav rounded-tr-[10px] rounded-br-[10px];
 }
 
 .contact-admin-overflow::-webkit-scrollbar-thumb {
-    @apply rounded-[10px] bg-black-nav
+    @apply rounded-[10px] bg-black-nav;
 }
 
 .contact-admin-overflow::-webkit-scrollbar {
@@ -38,7 +47,7 @@ body::-webkit-scrollbar, .detail-portfolio::-webkit-scrollbar, .web-name::-webki
 }
 
 .container-asli-portfolio-detail::-webkit-scrollbar-thumb {
-    @apply bg-transparent
+    @apply bg-transparent;
 }
 
 .container-asli-portfolio-detail::-webkit-scrollbar {
@@ -50,7 +59,7 @@ html {
 }
 
 .intro {
-    background: linear-gradient(91.5deg, #EB8B75 0.24%, #A21AA5 100%);
+    background: linear-gradient(91.5deg, #eb8b75 0.24%, #a21aa5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -58,10 +67,12 @@ html {
 }
 
 .flex-detail-portfolio {
-    @apply flex
+    @apply flex;
 }
 
-.masih-pengembangan, .masih-pengembangan-detail, .contact-message {
+.masih-pengembangan,
+.masih-pengembangan-detail,
+.contact-message {
     animation: bottom-to-top 0.5s;
 }
 
@@ -86,16 +97,16 @@ html {
 }
 
 .nav-opacity {
-    @apply opacity-60
+    @apply opacity-60;
 }
 
 .nav-shadow {
-    @apply shadow-xl shadow-black opacity-100
+    @apply shadow-xl shadow-black opacity-100;
 }
 
 /* admin */
 .nav-mobile-admin-show {
-    @apply translate-x-0
+    @apply translate-x-0;
 }
 
 .alert-admin-content {
@@ -105,7 +116,7 @@ html {
 
 @keyframes top-to-bottom {
     0% {
-        transform: translateY(200%);        
+        transform: translateY(200%);
     }
 
     100% {
@@ -114,47 +125,47 @@ html {
 }
 
 .laravel {
-    background-color: #E8392C;
+    background-color: #e8392c;
     height: 35px;
 }
 .php {
-    background-color: #7377AD;
+    background-color: #7377ad;
     height: 35px;
 }
 .javascript {
-    background-color: #E8D44D;
+    background-color: #e8d44d;
     height: 35px;
 }
 .node {
-    background-color: #3F893A;
+    background-color: #3f893a;
     height: 35px;
 }
 .ex {
-    background-color: #1D0E74;
+    background-color: #1d0e74;
     height: 35px;
 }
 .html {
-    background-color: #E86226;
+    background-color: #e86226;
     height: 35px;
 }
 .css {
-    background-color: #0079C0;
+    background-color: #0079c0;
     height: 35px;
 }
 .tw {
-    background-color: #36B7F0;
+    background-color: #36b7f0;
     height: 35px;
 }
 .react {
-    background-color: #7CD1EF;
+    background-color: #7cd1ef;
     height: 35px;
 }
 .mysql {
-    background-color: #EA8C10;
+    background-color: #ea8c10;
     height: 35px;
 }
 .git {
-    background-color: #E84E31;
+    background-color: #e84e31;
     height: 35px;
 }
 .github {
@@ -162,11 +173,11 @@ html {
     height: 35px;
 }
 .api {
-    background-color: #26225A;
+    background-color: #26225a;
     height: 35px;
 }
 .figma {
-    background-color: #9B5EF2;
+    background-color: #9b5ef2;
     height: 35px;
 }
 
@@ -193,12 +204,11 @@ html {
     transform: translateY('80%');
 } */
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .container-asli-portfolio-detail::-webkit-scrollbar-thumb {
-        @apply bg-black-nav
+        @apply bg-black-nav;
     }
-    
+
     .container-asli-portfolio-detail::-webkit-scrollbar {
         width: 10px;
     }
