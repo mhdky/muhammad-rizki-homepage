@@ -32,6 +32,7 @@
     @vite('resources/css/app.css')
 </head>
 
+{{-- hello --}}
 <body class="bg-body" id="home">
     <!-- nav mobile -->
     <div class="nav-mobile bg-black-nav w-full fixed z-30 bottom-0 py-3 flex justify-evenly items-center md-768:hidden">
