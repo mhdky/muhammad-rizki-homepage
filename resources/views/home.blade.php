@@ -35,26 +35,26 @@
 <body class="bg-body" id="home">
     <!-- nav mobile -->
     <div class="nav-mobile bg-black-nav w-full fixed z-30 bottom-0 py-3 flex justify-evenly items-center md-768:hidden">
-        <a href="#about" class="text-black-list text-sm font-bold hover:text-white-primary">About</a>
+        <a href="#about" class="text-black-list text-sm font-bold hover:text-white-primary cursor-default md-768:cursor-pointer">About</a>
         <span class="bg-[#484e53] w-[1px] h-2"></span>
-        <a href="#skills" class="text-black-list text-sm font-bold hover:text-white-primary">Skills</a>
+        <a href="#skills" class="text-black-list text-sm font-bold hover:text-white-primary cursor-default md-768:cursor-pointer">Skills</a>
         <span class="bg-[#484e53] w-[1px] h-2"></span>
-        <a href="#portfolio" class="text-black-list text-sm font-bold hover:text-white-primary">Portfolio</a>
+        <a href="#portfolio" class="text-black-list text-sm font-bold hover:text-white-primary cursor-default md-768:cursor-pointer">Portfolio</a>
         <span class="bg-[#484e53] w-[1px] h-2"></span>
-        <a href="#contact" class="text-black-list text-sm font-bold hover:text-white-primary">Contact</a>
+        <a href="#contact" class="text-black-list text-sm font-bold hover:text-white-primary cursor-default md-768:cursor-pointer">Contact</a>
     </div>
 
     <!-- nav desktop -->
     <div class="hidden w-full md-768:flex justify-center fixed z-30 top-0">
-        <div class="mt-7 flex">
+        <div class="nav-desktop mt-7 flex">
             <!-- profile -->
             <a href="#home" class="">
                 <img src="{{ asset('img/profil-1.png') }}" alt="Muhammad Rizki"
-                    class="profil w-[50px] h-max mr-3 cursor-pointer rounded-full">
+                    class="w-[50px] h-max mr-3 cursor-pointer rounded-full">
             </a>
 
             <!-- list nav -->
-            <div class="nav-desktop bg-black-nav w-[405px] h-12 flex justify-evenly items-center rounded-[20px] ">
+            <div class="bg-black-nav w-[405px] h-12 flex justify-evenly items-center rounded-[20px] ">
                 <a href="#about" class="text-black-list hover:text-white-primary">About</a>
                 <a href="#skills" class="text-black-list hover:text-white-primary">Skills</a>
                 <a href="#portfolio" class="text-black-list hover:text-white-primary">Portfolio</a>
@@ -80,26 +80,26 @@
                 </div>
 
                 <!-- instagram -->
-                <a href="{{ $medsos->instagram }}" class="flex items-center mt-4">
+                <a href="{{ $medsos->instagram }}" class="flex items-center mt-4 cursor-default md-768:cursor-pointer">
                     <i class="fa-brands fa-instagram"></i>
                     <p class="text-sm font-bold ml-3">Instagram</p>
                 </a>
 
                 <!-- LinkedIn -->
                 <a href="{{ $medsos->linkedin }}"
-                    class="flex items-center mt-2 md-950:mt-3">
+                    class="flex items-center mt-2 cursor-default md-768:cursor-pointer md-950:mt-3">
                     <i class="fa-brands fa-linkedin-in"></i>
                     <p class="text-sm font-bold ml-3">LinkedIn</p>
                 </a>
 
                 <!-- github -->
-                <a href="{{ $medsos->github }}" class="flex items-center mt-2 md-950:mt-3">
+                <a href="{{ $medsos->github }}" class="flex items-center mt-2 cursor-default md-768:cursor-pointer md-950:mt-3">
                     <i class="fa-brands fa-github"></i>
                     <p class="text-sm font-bold ml-3">Github</p>
                 </a>
 
                 <!-- email -->
-                <a href="{{ $medsos->email }}" class="flex items-center mt-2 md-950:mt-3">
+                <a href="{{ $medsos->email }}" class="flex items-center mt-2 cursor-default md-768:cursor-pointer md-950:mt-3">
                     <i class="fa-regular fa-envelope"></i>
                     <p class="text-sm font-bold ml-3">E-Mail</p>
                 </a>
@@ -129,7 +129,7 @@
             <p class="mt-3 md-950:leading-[26px]">{{ $about->paragraf_three }}</p>
 
             <a href="{{ $medsos->cv }}"
-                class="w-max bg-black-follow mt-5 py-3 px-5 rounded-[20px] flex items-center hover:bg-black-nav">
+                class="w-max bg-black-follow mt-5 py-3 px-5 rounded-[20px] flex items-center cursor-default md-768:cursor-pointer hover:bg-black-nav">
                 <p class="text-sm font-semibold">Download CV</p>
                 <span class="bg-white-primary w-[40px] h-[1px] ml-2"></span>
                 <span class="bg-white-primary w-2 h-2 rounded-full ml-1"></span>
@@ -249,12 +249,12 @@
                     <!-- button -->
                     <div class="flex">
                         <!-- button detail -->
-                        <div class="card-portfolio bg-[#25319F] hover:bg-[#3243D8] w-[80px] h-[32px] mr-2 rounded-[10px] flex justify-center items-center text-[12px] font-bold cursor-pointer">Detail</div>
+                        <div class="card-portfolio bg-[#25319F] hover:bg-[#3243D8] w-[80px] h-[32px] mr-2 rounded-[10px] flex justify-center items-center text-[12px] font-bold cursor-default md-768:cursor-pointer">Detail</div>
                         <!-- button visit -->
                         @if ($portfolio->status === 'Development')
-                            <div class="no-link bg-[#138A34] hover:bg-[#20B84B] w-[80px] h-[32px] rounded-[10px] flex justify-center items-center text-[12px] font-bold cursor-pointer">Visit</div>
+                            <div class="no-link bg-[#138A34] hover:bg-[#20B84B] w-[80px] h-[32px] rounded-[10px] flex justify-center items-center text-[12px] font-bold cursor-default md-768:cursor-pointer">Visit</div>
                         @else
-                            <a target="_blank" href="{{ $portfolio->web_link }}" class="bg-[#138A34] hover:bg-[#20B84B] w-[80px] h-[32px] rounded-[10px] flex justify-center items-center text-[12px] font-bold">Visit</a>
+                            <a target="_blank" href="{{ $portfolio->web_link }}" class="bg-[#138A34] hover:bg-[#20B84B] w-[80px] h-[32px] rounded-[10px] flex justify-center items-center text-[12px] font-bold cursor-default md-768:cursor-pointer">Visit</a>
                         @endif
                     </div>
                 </div>
@@ -269,22 +269,22 @@
     @foreach ($portfolios as $portfolio)
     <div class="detail-portfolio hidden flex-col justify-end bg-[#00000083] fixed z-40 top-0 right-0 bottom-0 left-0">
         {{-- container detail portfolio --}}
-        <div class="containerDetailPortfolio bg-black-follow w-full h-[90vh] flex flex-col rounded-t-[20px] overflow-hidden lg-1000:w-[1000px] lg-1000:mx-auto lg-1080:shadow-xl lg-1080:shadow-black">
+        <div class="containerDetailPortfolio bg-black-follow w-full h-[90vh] flex flex-col rounded-t-[20px] overflow-hidden lg-1080:w-[1080px] lg-1080:mx-auto lg-1080:shadow-xl border border-[#ffffff1c] border-b-transparent">
             {{-- header detail portfolio --}}
-            <div class="bg-black-follow w-full h-12 flex justify-between items-center sticky top-0 border border-t-transparent border-r-transparent border-l-transparent border-b-[#272729]">
+            <div class="bg-black-follow w-full h-12 flex justify-between items-center sticky top-0 border border-t-transparent border-r-transparent border-l-transparent border-b-[#ffffff1c]">
                 <h1 class="font-bold pl-3 sm-480:hidden">{{ Str::upper(Str::limit($portfolio->web_name, 20))  }}</h1>
                 <h1 class="font-bold pl-3 hidden sm-480:block sm-650:hidden">{{ Str::upper(Str::limit($portfolio->web_name, 30)) }}</h1>
                 <h1 class="font-bold pl-3 hidden sm-650:block md-860:hidden">{{ Str::upper(Str::limit($portfolio->web_name, 40)) }}</h1>
                 <h1 class="font-bold pl-3 hidden md-860:block lg-1000:hidden">{{ Str::upper(Str::limit($portfolio->web_name, 50)) }}</h1>
                 <h1 class="font-bold pl-3 hidden lg-1000:block">{{ Str::upper(Str::limit($portfolio->web_name, 70)) }}</h1>
 
-                <div class="close-detail-portfolio bg-red-delete w-12 h-full flex justify-center items-center cursor-pointer">
+                <div class="close-detail-portfolio bg-[#ff000011] border border-[#ffffff1c] hover:bg-red-delete w-8 h-8 mr-3 rounded-[5px] flex justify-center items-center cursor-default md-768:cursor-pointer">
                     <i class="fas fa-times text-lg"></i>
                 </div>
             </div>
 
             {{-- container asli portfolio detail --}}
-            <div class="container-asli-portfolio-detail w-full h-full pt-5 flex flex-col overflow-auto md-768:flex-row">
+            <div class="container-asli-portfolio-detail w-full h-full pt-3 flex flex-col overflow-auto md-768:flex-row">
                 {{-- web name, technology, description --}}
                 <div class="w-full px-3 md-768:order-2 md-768:pl-[6px]">
                     {{-- web name --}}
@@ -317,11 +317,11 @@
 
                     @if ($portfolio->status === 'Development')
                         <div class="w-full flex justify-end items-center pb-5">
-                            <div class="no-link-detail bg-[#138A34] hover:bg-[#20B84B] w-28 h-9 mr-2 text-sm font-bold flex justify-center items-center rounded-[20px] cursor-pointer">
+                            <div class="no-link-detail bg-[#138A34] hover:bg-[#20B84B] w-28 h-9 mr-2 text-sm font-bold flex justify-center items-center rounded-[20px] cursor-default md-768:cursor-pointer">
                                 Visit
                             </div>
 
-                            <div class="no-link-detail bg-[#25319F] hover:bg-[#3243D8] w-28 h-9 text-sm font-bold flex justify-center items-center rounded-[20px] cursor-pointer">
+                            <div class="no-link-detail bg-[#25319F] hover:bg-[#3243D8] w-28 h-9 text-sm font-bold flex justify-center items-center rounded-[20px] cursor-default md-768:cursor-pointer">
                                 Repository
                             </div>
                         </div>
@@ -350,14 +350,14 @@
     <!-- no link portfolio -->
     <div class="masih-pengembangan fixed z-50 top-0 right-0 bottom-0 left-0 hidden justify-center items-end md-768:justify-start">
         <p
-            class="masih-pengembangan-dua bg-red-delete font-bold py-3 px-4 rounded-[20px] ml-3 mb-5">
+            class="masih-pengembangan-dua bg-white-primary font-bold py-3 px-4 text-black-follow rounded-[20px] ml-3 mb-5 shadow-lg shadow-black">
             Masih dalam pengembangan!</p>
     </div>
 
     <!-- no link portfolio detail -->
     <div class="masih-pengembangan-detail fixed z-50 top-0 right-0 bottom-0 left-0 hidden justify-center items-end md-768:justify-start">
         <p
-            class="masih-pengembangan-dua-detail bg-red-delete font-bold py-3 px-4 rounded-[20px] ml-3 mb-5">
+            class="masih-pengembangan-dua-detail bg-white-primary font-bold py-3 px-4 text-black-follow rounded-[20px] ml-3 mb-5 shadow-lg shadow-black">
             Masih dalam pengembangan!</p>
     </div>
 
@@ -435,9 +435,9 @@
             </div>
 
             <button type="submit" disabled class="buttonSend bg-[#f1f1f1] w-[150px] h-[45px] flex justify-center items-center rounded-[20px]">
-                <p class="send text-[14px] text-[#9a9a9a] font-bold mr-1">Send</p>
-                <span class="line bg-[#9a9a9a] w-[35px] h-[1px] mr-1"></span>
-                <span class="bullet bg-[#9a9a9a] w-2 h-2 rounded-full"></span>
+                <p class="send text-[14px] text-[#696969] font-bold mr-1">Send</p>
+                <span class="line bg-[#696969] w-[35px] h-[1px] mr-1"></span>
+                <span class="bullet bg-[#696969] w-2 h-2 rounded-full"></span>
             </button>
         </form>
     </div>
@@ -445,7 +445,7 @@
     {{-- contact message berhasil --}}
     @if(session()->has('berhasil'))
         <div class="contact-message fixed z-50 top-0 right-0 bottom-0 left-0 flex justify-center items-end cursor-default md-768:justify-start">
-            <p class="the-message bg-white-primary text-black-about font-bold mb-12 ml-3 py-3 px-4 rounded-[20px] md-768:mb-4">{{ session('berhasil') }}</p>
+            <p class="the-message bg-white-primary text-black-about font-bold mb-12 ml-3 py-3 px-4 rounded-[20px] shadow-lg shadow-black md-768:mb-4">{{ session('berhasil') }}</p>
         </div>
     @endif
         
@@ -460,13 +460,13 @@
     <div class="bg-black-about w-full mt-20 pb-[49px] px-3 flex justify-center md-768:pb-0 md-768:mt-32">
         <div class="flex flex-col">
             <ul class="w-full flex justify-center mt-6 mb-3">
-                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->instagram }}">Instagram</a></li>
-                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->linkedin }}">LinkedIn</a></li>
-                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->github }}">Github</a></li>
-                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->email }}">E-Mail</a></li>
+                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->instagram }}" class="cursor-default md-768:cursor-pointer">Instagram</a></li>
+                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->linkedin }}" class="cursor-default md-768:cursor-pointer">LinkedIn</a></li>
+                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->github }}" class="cursor-default md-768:cursor-pointer">Github</a></li>
+                <li class="mx-2 text-black-list font-bold hover:text-white-primary"><a href="{{ $medsos->email }}" class="cursor-default md-768:cursor-pointer">E-Mail</a></li>
             </ul>
 
-            <p class="w-full flex justify-center items-center mb-6 text-[12px] text-[#47474B] font-bold text-center">© <span class="text-[12px] text-[#47474B] font-bold mx-0.5" id="copyright"></span> Muhammad Rizki. All rights reserved</p>
+            <p class="w-full flex justify-center items-center mb-6 text-[12px] text-[#47474B] font-bold text-center">© {{ now()->year }} Muhammad Rizki. All rights reserved</p>
         </div>
     </div>
 

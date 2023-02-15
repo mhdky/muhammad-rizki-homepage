@@ -1,30 +1,17 @@
 const navDesktop = document.querySelector(".nav-desktop");
-const profil = document.querySelector(".profil");
 
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
         navDesktop.classList.add("nav-opacity");
-        profil.classList.add("nav-opacity");
     } else {
         navDesktop.classList.remove("nav-opacity");
-        profil.classList.remove("nav-opacity");
     }
 });
 navDesktop.addEventListener("mouseenter", () => {
     navDesktop.classList.add("nav-shadow");
-    profil.classList.add("nav-shadow");
 });
 navDesktop.addEventListener("mouseleave", () => {
     navDesktop.classList.remove("nav-shadow");
-    profil.classList.remove("nav-shadow");
-});
-profil.addEventListener("mouseenter", () => {
-    navDesktop.classList.add("nav-shadow");
-    profil.classList.add("nav-shadow");
-});
-profil.addEventListener("mouseleave", () => {
-    navDesktop.classList.remove("nav-shadow");
-    profil.classList.remove("nav-shadow");
 });
 
 const cardPortfolio = document.querySelectorAll(".card-portfolio");
@@ -159,13 +146,9 @@ function messageCheck() {
 
     } else {
         buttonSend.disabled = true;
-        buttonSend.style.opacity = "0.4";
-        send.style.color = "#9a9a9a";
-        line.style.backgroundColor = "#9a9a9a";
-        bullet.style.backgroundColor = "#9a9a9a";
+        buttonSend.style.opacity = "0.1";
+        send.style.color = "#696969";
+        line.style.backgroundColor = "#696969";
+        bullet.style.backgroundColor = "#696969";
     }
 }
-
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("copyright").innerHTML = year;
