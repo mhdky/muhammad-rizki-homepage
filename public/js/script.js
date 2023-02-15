@@ -1,5 +1,7 @@
 const navDesktop = document.querySelector(".nav-desktop");
 
+// hello
+
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
         navDesktop.classList.add("nav-opacity");
@@ -16,27 +18,34 @@ navDesktop.addEventListener("mouseleave", () => {
 
 const cardPortfolio = document.querySelectorAll(".card-portfolio");
 const detailPortfolio = document.querySelectorAll(".detail-portfolio");
-const containerDetailPortfolio = document.querySelectorAll(".containerDetailPortfolio");
+const containerDetailPortfolio = document.querySelectorAll(
+    ".containerDetailPortfolio"
+);
 const body = document.querySelector("body");
 const closeDetailPortfolio = document.querySelectorAll(
     ".close-detail-portfolio"
 );
 
 for (
-    let cP = 0; cP < cardPortfolio.length || cP < detailPortfolio.length || cP < closeDetailPortfolio.length || cP < containerDetailPortfolio.length; cP++
+    let cP = 0;
+    cP < cardPortfolio.length ||
+    cP < detailPortfolio.length ||
+    cP < closeDetailPortfolio.length ||
+    cP < containerDetailPortfolio.length;
+    cP++
 ) {
     cardPortfolio[cP].addEventListener("click", () => {
         detailPortfolio[cP].classList.add("flex-detail-portfolio");
-            body.classList.add("overflow-hidden");
-            containerDetailPortfolio[cP].style.transform = 'translateY(0)';
-            containerDetailPortfolio[cP].style.transition = "0.3s";
+        body.classList.add("overflow-hidden");
+        containerDetailPortfolio[cP].style.transform = "translateY(0)";
+        containerDetailPortfolio[cP].style.transition = "0.3s";
     });
     closeDetailPortfolio[cP].addEventListener("click", () => {
         setTimeout(() => {
             detailPortfolio[cP].classList.remove("flex-detail-portfolio");
-            body.classList.remove("overflow-hidden");   
+            body.classList.remove("overflow-hidden");
         }, 300);
-        containerDetailPortfolio[cP].style.transform = 'translateY(100%)';
+        containerDetailPortfolio[cP].style.transform = "translateY(100%)";
         containerDetailPortfolio[cP].style.transition = "0.3s";
     });
 }
@@ -114,22 +123,22 @@ function messageCheck() {
     const keteranganEmail = document.querySelector(".keteranganEmail");
     const keteranganMessage = document.querySelector(".keteranganMessage");
 
-    if(inputName.value.length < 3) {
-        keteranganName.style.display = 'block'; 
+    if (inputName.value.length < 3) {
+        keteranganName.style.display = "block";
     } else {
-        keteranganName.style.display = 'none';
+        keteranganName.style.display = "none";
     }
 
-    if(inputEmail.value.match(validRegex)) {
-        keteranganEmail.style.display = 'none';
+    if (inputEmail.value.match(validRegex)) {
+        keteranganEmail.style.display = "none";
     } else {
-        keteranganEmail.style.display = 'block';
+        keteranganEmail.style.display = "block";
     }
 
-    if(inputMessage.value.length < 5) {
-        keteranganMessage.style.display = 'block';
+    if (inputMessage.value.length < 5) {
+        keteranganMessage.style.display = "block";
     } else {
-        keteranganMessage.style.display = 'none';
+        keteranganMessage.style.display = "none";
     }
 
     if (
@@ -143,7 +152,6 @@ function messageCheck() {
         send.style.color = "#1D1D1E";
         line.style.backgroundColor = "#1D1D1E";
         bullet.style.backgroundColor = "#1D1D1E";
-
     } else {
         buttonSend.disabled = true;
         buttonSend.style.opacity = "0.1";
