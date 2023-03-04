@@ -213,3 +213,13 @@ html {
         width: 10px;
     }
 }
+
+.navFixed {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+}
+
+.active {
+    @apply text-white-primary
+}

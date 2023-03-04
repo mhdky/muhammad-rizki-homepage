@@ -1,31 +1,38 @@
+// navigasi akan muncul ketika discrool ke atas dan akan hilang jika di scroll ke bawah
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+let currentScrollPos = window.pageYOffset;
 const navDesktop = document.querySelector(".nav-desktop");
+    if (prevScrollpos > currentScrollPos) {
+        navDesktop.style.top = "0";
+    } else {
+        navDesktop.style.top = "-150px";
+    }
+    prevScrollpos = currentScrollPos;
+}
 
-// hello
-
+// profil dan list navigasi desktop akan menambahkan shadow jika di scroll lebih besar dai 100px
+const profil = document.querySelector('.profil');
+const listNavDesktop = document.querySelector('.listNavDesktop');
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
-        navDesktop.classList.add("nav-opacity");
+    profil.classList.add("nav-shadow");
+    listNavDesktop.classList.add("nav-shadow");
     } else {
-        navDesktop.classList.remove("nav-opacity");
+    profil.classList.remove("nav-shadow");
+    listNavDesktop.classList.remove("nav-shadow");
     }
-});
-navDesktop.addEventListener("mouseenter", () => {
-    navDesktop.classList.add("nav-shadow");
-});
-navDesktop.addEventListener("mouseleave", () => {
-    navDesktop.classList.remove("nav-shadow");
 });
 
 const cardPortfolio = document.querySelectorAll(".card-portfolio");
 const detailPortfolio = document.querySelectorAll(".detail-portfolio");
-const containerDetailPortfolio = document.querySelectorAll(
-    ".containerDetailPortfolio"
-);
+const containerDetailPortfolio = document.querySelectorAll(".containerDetailPortfolio");
 const body = document.querySelector("body");
 const closeDetailPortfolio = document.querySelectorAll(
     ".close-detail-portfolio"
 );
 
+// menampilkan pop up detail portfolio
 for (
     let cP = 0;
     cP < cardPortfolio.length ||
@@ -50,6 +57,7 @@ for (
     });
 }
 
+// memberikan alert jika sebuah portfolio masih dalam pengembangan
 const noLink = document.querySelectorAll(".no-link");
 const masihPengembangan = document.querySelector(".masih-pengembangan");
 const navMobile = document.querySelector(".nav-mobile");
@@ -72,7 +80,6 @@ masihPengembangan.addEventListener("click", () => {
         navMobile.classList.remove("nav-mobile-hide");
     }, "100");
 });
-
 const noLinkDetail = document.querySelectorAll(".no-link-detail");
 const masihPengembanganDetail = document.querySelector(
     ".masih-pengembangan-detail"
@@ -96,6 +103,7 @@ masihPengembanganDetail.addEventListener("click", () => {
     }, "100");
 });
 
+// memberikan alert pesan berhasil atau gagal
 const contactMessage = document.querySelector(".contact-message");
 const theMessage = document.querySelector(".the-message");
 contactMessage.addEventListener("click", () => {
@@ -107,11 +115,11 @@ contactMessage.addEventListener("click", () => {
     }, "100");
 });
 
-// chect contact message
+// untuk memvalidasi penulisan contac untuk melakukan message
 function messageCheck() {
-    const inputName = document.querySelector(".inputName");
+    const inputName = document.querySelector(".inputName").value.replace(/\s/g,'');
     const inputEmail = document.querySelector(".inputEmail");
-    const inputMessage = document.querySelector(".inputMessage");
+    const inputMessage = document.querySelector(".inputMessage").value.replace(/\s/g,'');
     let validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     const buttonSend = document.querySelector(".buttonSend");
@@ -123,7 +131,7 @@ function messageCheck() {
     const keteranganEmail = document.querySelector(".keteranganEmail");
     const keteranganMessage = document.querySelector(".keteranganMessage");
 
-    if (inputName.value.length < 3) {
+    if (inputName.length < 3) {
         keteranganName.style.display = "block";
     } else {
         keteranganName.style.display = "none";
@@ -135,17 +143,17 @@ function messageCheck() {
         keteranganEmail.style.display = "block";
     }
 
-    if (inputMessage.value.length < 5) {
+    if (inputMessage.length < 5) {
         keteranganMessage.style.display = "block";
     } else {
         keteranganMessage.style.display = "none";
     }
 
     if (
-        inputName.value.length > 2 &&
+        inputName.length > 2 &&
         inputEmail.value.length > 4 &&
         inputEmail.value.match(validRegex) &&
-        inputMessage.value.length > 4
+        inputMessage.length > 4
     ) {
         buttonSend.disabled = false;
         buttonSend.style.opacity = "1";
