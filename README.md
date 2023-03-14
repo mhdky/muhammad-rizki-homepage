@@ -1,6 +1,7 @@
 # Home Page mhdrizki.com
 
 [mhdrizki.com](https://mhdrizki.com)
+
 Web yang berisi mengenai:
  * Tentang saya
  * Keahlian yang saya kuasai
